@@ -11,7 +11,7 @@ RSpec.describe UserProfile, type: :model do
 
   describe "attributes" do
     it "has contact info, important dates, measurements, payment status as attributes" do
-      expect(post).to have_attributes(first_name: "First Name", last_name: "Last Name",
+      expect(user_profile).to have_attributes(first_name: "First Name", last_name: "Last Name",
         email: "example@email.com", phone_number: "999-999-9999", shipping_address: "Street name, City, State Zip Code",
         wedding_date: "May 27, 1988", bridals_date: "May 25, 1988", height: "0.0",
         over_bust: "0.0", bust: "0.0", under_bust: "0.0", braw_size: "AA", waist: "0.0",
