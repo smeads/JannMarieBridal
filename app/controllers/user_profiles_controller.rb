@@ -91,4 +91,15 @@ class UserProfilesController < ApplicationController
        render :new
     end
   end
+
+  def destroy
+    @user_profile = UserProfile.find(params[:id])
+    if @user_profile.destroy
+      flash[:notice] = "\"#{@user_profile.first_name}\" was deleted successfully."
+      redirect_to user_profiles_path
+    else
+     flash.now[:alert] = "There was an error deleting the wedding profile."
+     render :show
+    end
+  end
 end

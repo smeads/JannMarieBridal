@@ -257,4 +257,17 @@ let(:my_user_profile) { UserProfile.create!(first_name: Faker::Name.first_name, 
         expect(response).to redirect_to my_user_profile
     end
   end
+
+  describe "DELETE destroy" do
+    it "deletes the user_profile" do
+      delete :destroy, {id: my_user_profile.id}
+      count = UserProfile.where({id: my_user_profile.id}).size
+      expect(count).to eq 0
+    end
+
+    it "redirects to user_profiles" do
+      delete :destroy, {id: my_user_profile.id}
+      expect(response).to redirect_to user_profiles_path
+    end
+  end
 end
