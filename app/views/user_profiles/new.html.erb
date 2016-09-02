@@ -1,81 +1,140 @@
+<h1>Wedding Profile</h1>
+
+<div class="col-md-8">
 <%= form_for @user_profile do |f| %>
+<h2>Contact Info</h2>
+  <div class="form-group">
    <%= f.label :first_name %>
-   <%= f.text_field :first_name %>
+   <%= f.text_field :first_name, class: 'form-control', placeholder: "First name" %>
+  </div>
 
+  <div class="form-group">
    <%= f.label :last_name %>
-   <%= f.text_field :last_name %>
+   <%= f.text_field :last_name, class: 'form-control', placeholder: "Last name" %>
+  </div>
 
+  <div class="form-group">
    <%= f.label :email %>
-   <%= f.text_field :email %>
+   <%= f.text_field :email, class: 'form-control', placeholder: "example@email.com" %>
+  </div>
 
+  <div class="form-group">
    <%= f.label :phone_number %>
-   <%= f.text_field :phone_number %>
+   <%= f.text_field :phone_number, class: 'form-control', placeholder: "(999) 999-9999" %>
+  </div>
 
+  <div class="form-group">
    <%= f.label :shipping_address %>
-   <%= f.text_area :shipping_address %>
-
+   <%= f.text_area :shipping_address, class: 'form-control', placeholder: " 722 Best Address, SLC, UT 84000" %>
+  </div>
+<h2>Important Dates</h2>
+  <div class="form-group">
    <%= f.label :wedding_date %>
-   <%= f.text_field :wedding_date %>
+   <%= f.text_field :wedding_date, class: 'form-control', placeholder: "May, 27 1988" %>
+  </div>
 
+  <div class="form-group">
    <%= f.label :bridals_date %>
-   <%= f.text_field :bridals_date %>
-
+   <%= f.text_field :bridals_date, class: 'form-control', placeholder: "May, 25 1988" %>
+  </div>
+<h2>Measurements</h2>
+  <div class="form-group">
    <%= f.label :height %>
-   <%= f.text_field :height %>
+   <%= f.text_field :height, class: 'form-control', placeholder: "6.2" %>
+  </div>
 
+  <div class="form-group">
    <%= f.label :over_bust %>
-   <%= f.text_field :over_bust %>
+   <%= f.text_field :over_bust, class: 'form-control', placeholder: "3.5" %>
+  </div>
 
+  <div class="form-group">
    <%= f.label :bust %>
-   <%= f.text_field :bust %>
+   <%= f.text_field :bust, class: 'form-control', placeholder: "3.5" %>
+  </div>
 
+  <div class="form-group">
    <%= f.label :under_bust %>
-   <%= f.text_field :under_bust %>
+   <%= f.text_field :under_bust, class: 'form-control', placeholder: "3.5" %>
+  </div>
 
+  <div class="form-group">
    <%= f.label :braw_size %>
-   <%= f.text_field :braw_size %>
+   <%= f.text_field :braw_size, class: 'form-control', placeholder: "3.5" %>
+  </div>
 
+  <div class="form-group">
    <%= f.label :waist %>
-   <%= f.text_field :waist %>
+   <%= f.text_field :waist, class: 'form-control', placeholder: "3.5" %>
+  </div>
 
+  <div class="form-group">
    <%= f.label :hip %>
-   <%= f.text_field :hip %>
+   <%= f.text_field :hip, class: 'form-control', placeholder: "3.5" %>
+  </div>
 
+  <div class="form-group">
    <%= f.label :natural_waist %>
-   <%= f.text_field :natural_waist %>
+   <%= f.text_field :natural_waist, class: 'form-control', placeholder: "3.5" %>
+  </div>
 
+  <div class="form-group">
    <%= f.label :shoulder_to_shoulder %>
-   <%= f.text_field :shoulder_to_shoulder %>
+   <%= f.text_field :shoulder_to_shoulder, class: 'form-control', placeholder: "3.5" %>
+  </div>
 
+  <div class="form-group">
    <%= f.label :shoulder_to_waist %>
-   <%= f.text_field :shoulder_to_waist %>
+   <%= f.text_field :shoulder_to_waist, class: 'form-control', placeholder: "3.5" %>
+  </div>
 
+  <div class="form-group">
    <%= f.label :waist_to_floor %>
-   <%= f.text_field :waist_to_floor %>
+   <%= f.text_field :waist_to_floor, class: 'form-control', placeholder: "3.5" %>
+  </div>
 
+  <div class="form-group">
    <%= f.label :rise %>
-   <%= f.text_field :rise %>
-
+   <%= f.text_field :rise, class: 'form-control', placeholder: "3.5" %>
+  </div>
+<h2>Sleeves (if applicable)</h2>
+  <div class="form-group">
    <%= f.label :sleeve_length %>
-   <%= f.text_field :sleeve_length %>
+   <%= f.text_field :sleeve_length, class: 'form-control', placeholder: "3.5" %>
+  </div>
 
+  <div class="form-group">
    <%= f.label :arm_hole %>
-   <%= f.text_field :arm_hole %>
+   <%= f.text_field :arm_hole, class: 'form-control', placeholder: "3.5" %>
+  </div>
 
+  <div class="form-group">
    <%= f.label :bicep %>
-   <%= f.text_field :bicep %>
+   <%= f.text_field :bicep, class: 'form-control', placeholder: "3.5" %>
+  </div>
 
+  <div class="form-group">
    <%= f.label :forearm %>
-   <%= f.text_field :forearm %>
-
+   <%= f.text_field :forearm, class: 'form-control', placeholder: "3.5" %>
+  </div>
+<h2>Payment Status</h2>
+  <div class="form-group">
    <%= f.label :deposit %>
-   <%= f.text_field :deposit %>
+   <%= f.text_field :deposit, class: 'form-control', placeholder: "3.5" %>
+  </div>
 
+  <div class="form-group">
    <%= f.label :paid_in_full %>
-   <%= f.text_field :paid_in_full %>
+   <%= f.text_field :paid_in_full, class: 'form-control', placeholder: "3.5" %>
+  </div>
 
-   <%= f.label :paid_in_full %>
-   <%= f.text_field :paid_in_full %>
+  <div class="form-group">
+   <%= f.label :shipping %>
+   <%= f.text_field :shipping, class: 'form-control', placeholder: "3.5" %>
+  </div>
 
-   <%= f.submit "Save" %>
+  <div class="form-group">
+   <%= f.submit "Save", lass: 'btn btn-success' %>
+  </div>
 <% end %>
+</div>
