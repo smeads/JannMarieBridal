@@ -5,3 +5,38 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+
+10.times do
+  UserProfile.create!(
+    first_name: Faker::Name.first_name,
+    last_name: Faker::Name.last_name,
+    email: Faker::Internet.email,
+    phone_number: Faker::PhoneNumber.phone_number,
+    shipping_address: Faker::Address.street_address,
+    wedding_date: Faker::Date.forward(23),
+    bridals_date: Faker::Date.forward(20),
+    height: Faker::Number.decimal(2),
+    over_bust: Faker::Number.decimal(2),
+    bust: Faker::Number.decimal(2),
+    under_bust: Faker::Number.decimal(2),
+    braw_size: Faker::Number.decimal(2),
+    waist: Faker::Number.decimal(2),
+    hip: Faker::Number.decimal(2),
+    natural_waist: Faker::Number.decimal(2),
+    shoulder_to_shoulder: Faker::Number.decimal(2),
+    shoulder_to_waist: Faker::Number.decimal(2),
+    waist_to_floor: Faker::Number.decimal(2),
+    rise: Faker::Number.decimal(2),
+    sleeve_length: Faker::Number.decimal(2),
+    arm_hole: Faker::Number.decimal(2),
+    bicep: Faker::Number.decimal(2),
+    forearm: Faker::Number.decimal(2),
+    deposit: Faker::Boolean.boolean,
+    paid_in_full: Faker::Boolean.boolean,
+    shipping: Faker::Boolean.boolean
+  )
+end
+user_profiles = UserProfile.all
+
+puts "Seed finished"
+puts "#{UserProfile.count} user profiles created"

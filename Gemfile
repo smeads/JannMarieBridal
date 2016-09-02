@@ -30,3 +30,5 @@ source 'https://rubygems.org'
  gem 'turbolinks'
  # Bootstrap provides layouts, forms, buttons, icons, Javascript functions, and more.
  gem 'bootstrap-sass'
+
+ gem 'faker'
