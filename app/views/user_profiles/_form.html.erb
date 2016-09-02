@@ -1,0 +1,124 @@
+<%= form_for @user_profile do |f| %>
+<h2>Contact Info</h2>
+  <% if user_profile.errors.any? %>
+     <div class="alert alert-danger">
+       <h4><%= pluralize(user_profile.errors.count, "error") %>.</h4>
+       <ul>
+         <% user_profile.errors.full_messages.each do |msg| %>
+           <li><%= msg %></li>
+         <% end %>
+       </ul>
+     </div>
+   <% end %>
+   <%= form_group_tag(user_profile.errors[:first_name]) do %>
+     <%= f.label :first_name %>
+     <%= f.text_field :first_name, class: 'form-control', placeholder: "First name" %>
+   <% end %>
+   <%= form_group_tag(user_profile.errors[:last_name]) do %>
+     <%= f.label :last_name %>
+     <%= f.text_field :last_name, class: 'form-control', placeholder: "Last name" %>
+   <% end %>
+   <%= form_group_tag(user_profile.errors[:email]) do %>
+     <%= f.label :email %>
+     <%= f.text_field :email, class: 'form-control', placeholder: "example@email.com" %>
+   <% end %>
+   <%= form_group_tag(user_profile.errors[:phone_number]) do %>
+     <%= f.label :phone_number %>
+     <%= f.text_field :phone_number, class: 'form-control', placeholder: "(999) 999-9999" %>
+   <% end %>
+   <%= form_group_tag(user_profile.errors[:shipping_address]) do %>
+     <%= f.label :shipping_address %>
+     <%= f.text_area :shipping_address, class: 'form-control', placeholder: " 722 Best Address, SLC, UT 84000" %>
+   <% end %>
+<h2>Important Dates</h2>
+  <%= form_group_tag(user_profile.errors[:wedding_date]) do %>
+     <%= f.label :wedding_date %>
+     <%= f.text_field :wedding_date, class: 'form-control', placeholder: "May, 27 1988" %>
+   <% end %>
+   <%= form_group_tag(user_profile.errors[:bridals_date]) do %>
+     <%= f.label :bridals_date %>
+     <%= f.text_field :bridals_date, class: 'form-control', placeholder: "May, 25 1988" %>
+   <% end %>
+<h2>Measurements</h2>
+  <%= form_group_tag(user_profile.errors[:height]) do %>
+     <%= f.label :height %>
+     <%= f.text_field :height, class: 'form-control', placeholder: "6.2" %>
+   <% end %>
+   <%= form_group_tag(user_profile.errors[:over_bust]) do %>
+     <%= f.label :over_bust %>
+     <%= f.text_field :over_bust, class: 'form-control', placeholder: "3.5" %>
+   <% end %>
+   <%= form_group_tag(user_profile.errors[:bust]) do %>
+     <%= f.label :bust %>
+     <%= f.text_field :bust, class: 'form-control', placeholder: "3.5" %>
+   <% end %>
+   <%= form_group_tag(user_profile.errors[:under_bust]) do %>
+     <%= f.label :under_bust %>
+     <%= f.text_field :under_bust, class: 'form-control', placeholder: "3.5" %>
+   <% end %>
+   <%= form_group_tag(user_profile.errors[:braw_size]) do %>
+     <%= f.label :braw_size %>
+     <%= f.text_field :braw_size, class: 'form-control', placeholder: "3.5" %>
+   <% end %>
+   <%= form_group_tag(user_profile.errors[:waist]) do %>
+     <%= f.label :waist %>
+     <%= f.text_field :waist, class: 'form-control', placeholder: "3.5" %>
+   <% end %>
+   <%= form_group_tag(user_profile.errors[:hip]) do %>
+     <%= f.label :hip %>
+     <%= f.text_field :hip, class: 'form-control', placeholder: "3.5" %>
+   <% end %>
+   <%= form_group_tag(user_profile.errors[:natural_waist]) do %>
+     <%= f.label :natural_waist %>
+     <%= f.text_field :natural_waist, class: 'form-control', placeholder: "3.5" %>
+   <% end %>
+   <%= form_group_tag(user_profile.errors[:shoulder_to_shoulder]) do %>
+     <%= f.label :shoulder_to_shoulder %>
+     <%= f.text_field :shoulder_to_shoulder, class: 'form-control', placeholder: "3.5" %>
+   <% end %>
+   <%= form_group_tag(user_profile.errors[:shoulder_to_waist]) do %>
+     <%= f.label :shoulder_to_waist %>
+     <%= f.text_field :shoulder_to_waist, class: 'form-control', placeholder: "3.5" %>
+   <% end %>
+   <%= form_group_tag(user_profile.errors[:waist_to_floor]) do %>
+     <%= f.label :waist_to_floor %>
+     <%= f.text_field :waist_to_floor, class: 'form-control', placeholder: "3.5" %>
+   <% end %>
+   <%= form_group_tag(user_profile.errors[:rise]) do %>
+     <%= f.label :rise %>
+     <%= f.text_field :rise, class: 'form-control', placeholder: "3.5" %>
+   <% end %>
+<h2>Sleeves (if applicable)</h2>
+   <%= form_group_tag(user_profile.errors[:sleeve_length]) do %>
+     <%= f.label :sleeve_length %>
+     <%= f.text_field :sleeve_length, class: 'form-control', placeholder: "3.5" %>
+   <% end %>
+   <%= form_group_tag(user_profile.errors[:arm_hole]) do %>
+     <%= f.label :arm_hole %>
+     <%= f.text_field :arm_hole, class: 'form-control', placeholder: "3.5" %>
+   <% end %>
+   <%= form_group_tag(user_profile.errors[:bicep]) do %>
+     <%= f.label :bicep %>
+     <%= f.text_field :bicep, class: 'form-control', placeholder: "3.5" %>
+   <% end %>
+   <%= form_group_tag(user_profile.errors[:forearm]) do %>
+     <%= f.label :forearm %>
+     <%= f.text_field :forearm, class: 'form-control', placeholder: "3.5" %>
+   <% end %>
+<h2>Payment Status</h2>
+   <%= form_group_tag(user_profile.errors[:deposit]) do %>
+     <%= f.label :deposit %>
+     <%= f.text_field :deposit, class: 'form-control', placeholder: "3.5" %>
+   <% end %>
+   <%= form_group_tag(user_profile.errors[:paid_in_full]) do %>
+     <%= f.label :paid_in_full %>
+     <%= f.text_field :paid_in_full, class: 'form-control', placeholder: "3.5" %>
+   <% end %>
+   <%= form_group_tag(user_profile.errors[:shipping]) do %>
+     <%= f.label :shipping %>
+     <%= f.text_field :shipping, class: 'form-control', placeholder: "3.5" %>
+   <% end %>
+  <div class="form-group">
+   <%= f.submit "Save", lass: 'btn btn-success' %>
+  </div>
+<% end %>
