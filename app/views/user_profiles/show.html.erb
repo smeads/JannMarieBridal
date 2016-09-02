@@ -1,2 +1,110 @@
-<h1>UserProfiles#show</h1>
-<p>Find me in app/views/user_profiles/show.html.erb</p>
+<h1>Wedding Profile</h1>
+
+<div class="col-md-8">
+<%= form_for @user_profile do |f| %>
+<h2>Contact Info</h2>
+  <div class="form-group">
+   <%= @user_profile.first_name %>
+  </div>
+
+  <div class="form-group">
+   <%= @user_profile.last_name %>
+  </div>
+
+  <div class="form-group">
+   <%= @user_profile.email %>
+  </div>
+
+  <div class="form-group">
+   <%= @user_profile.phone_number %>
+  </div>
+
+  <div class="form-group">
+   <%= @user_profile.shipping_address %>
+  </div>
+<h2>Important Dates</h2>
+  <div class="form-group">
+   <%= @user_profile.wedding_date %>
+  </div>
+
+  <div class="form-group">
+   <%= @user_profile.bridals_date %>
+  </div>
+<h2>Measurements</h2>
+  <div class="form-group">
+   <%= @user_profile.height %>
+  </div>
+
+  <div class="form-group">
+   <%= @user_profile.over_bust %>
+  </div>
+
+  <div class="form-group">
+   <%= @user_profile.bust %>
+  </div>
+
+  <div class="form-group">
+   <%= @user_profile.under_bust %>
+  </div>
+
+  <div class="form-group">
+   <%= @user_profile.braw_size %>
+  </div>
+
+  <div class="form-group">
+   <%= @user_profile.waist %>
+  </div>
+
+  <div class="form-group">
+   <%= @user_profile.hip %>
+  </div>
+
+  <div class="form-group">
+   <%= @user_profile.natural_waist %>
+  </div>
+
+  <div class="form-group">
+   <%= @user_profile.shoulder_to_shoulder %>
+  </div>
+
+  <div class="form-group">
+   <%= @user_profile.shoulder_to_waist %>
+  </div>
+
+  <div class="form-group">
+   <%= @user_profile.waist_to_floor %>
+  </div>
+
+  <div class="form-group">
+   <%= @user_profile.rise %>
+  </div>
+<h2>Sleeves (if applicable)</h2>
+  <div class="form-group">
+   <%= @user_profile.sleeve_length %>
+  </div>
+
+  <div class="form-group">
+   <%= @user_profile.arm_hole %>
+  </div>
+
+  <div class="form-group">
+   <%= @user_profile.bicep %>
+  </div>
+
+  <div class="form-group">
+   <%= @user_profile.forearm %>
+  </div>
+<h2>Payment Status</h2>
+  <div class="form-group">
+   <%= @user_profile.deposit %>
+  </div>
+
+  <div class="form-group">
+   <%= @user_profile.paid_in_full %>
+  </div>
+
+  <div class="form-group">
+   <%= @user_profile.shipping %>
+  </div>
+<% end %>
+</div>

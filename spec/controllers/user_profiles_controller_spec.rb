@@ -25,13 +25,23 @@ let(:my_user_profile) { UserProfile.create!(first_name: Faker::Name.first_name, 
     end
   end
 
-  # describe "GET #show" do
-  #   it "returns http success" do
-  #     get :show
-  #     expect(response).to have_http_status(:success)
-  #   end
-  # end
-  #
+  describe "GET #show" do
+    it "returns http success" do
+      get :show, {id: my_user_profile.id}
+      expect(response).to have_http_status(:success)
+    end
+
+    it "renders the #show view" do
+      get :show, {id: my_user_profile}
+      expect(response).to render_template :show
+    end
+
+    it "assigns my_user_profile @user_profile" do
+      get :show, {id: my_user_profile}
+      expect(assigns(:user_profile)).to eq(my_user_profile)
+    end
+  end
+
   describe "GET #new" do
     it "returns http success" do
       get :new
