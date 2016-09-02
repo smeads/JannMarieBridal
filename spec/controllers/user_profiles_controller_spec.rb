@@ -148,4 +148,113 @@ let(:my_user_profile) { UserProfile.create!(first_name: Faker::Name.first_name, 
       expect(user_profile_instance.shipping).to eq my_user_profile.shipping
     end
   end
+
+  describe "PUT update" do
+    it "updates user_profile with expected attributes" do
+      new_first_name = Faker::Name.first_name
+      new_last_name = Faker::Name.last_name
+      new_email = Faker::Internet.email
+      new_phone_number = Faker::PhoneNumber.phone_number
+      new_shipping_address = Faker::Address.street_address
+      new_wedding_date = Faker::Date.forward(23)
+      new_bridals_date = Faker::Date.forward(20)
+      new_height = Faker::Number.decimal(2)
+      new_over_bust = Faker::Number.decimal(2)
+      new_bust = Faker::Number.decimal(2)
+      new_under_bust = Faker::Number.decimal(2)
+      new_braw_size = Faker::Number.decimal(2)
+      new_waist = Faker::Number.decimal(2)
+      new_hip = Faker::Number.decimal(2)
+      new_natural_waist = Faker::Number.decimal(2)
+      new_shoulder_to_shoulder = Faker::Number.decimal(2)
+      new_shoulder_to_waist = Faker::Number.decimal(2)
+      new_waist_to_floor = Faker::Number.decimal(2)
+      new_rise = Faker::Number.decimal(2)
+      new_sleeve_length = Faker::Number.decimal(2)
+      new_arm_hole = Faker::Number.decimal(2)
+      new_bicep = Faker::Number.decimal(2)
+      new_forearm = Faker::Number.decimal(2)
+      new_deposit = Faker::Boolean.boolean
+      new_paid_in_full = Faker::Boolean.boolean
+      new_shipping = Faker::Boolean.boolean
+
+      put :update, id: my_user_profile.id, user_profile: {first_name: new_first_name, last_name: new_last_name,
+        email: new_email, phone_number: new_phone_number, shipping_address: new_shipping_address,
+        wedding_date: new_wedding_date, bridals_date: new_bridals_date, height: new_height,
+        over_bust: new_over_bust, bust: new_bust, under_bust: new_under_bust,
+        braw_size: new_braw_size, waist: new_waist, hip: new_hip, natural_waist: new_natural_waist,
+        shoulder_to_shoulder: new_shoulder_to_shoulder, shoulder_to_waist: new_shoulder_to_waist,
+        waist_to_floor: new_waist_to_floor, rise: new_rise, sleeve_length: new_sleeve_length,
+        arm_hole: new_arm_hole, bicep: new_bicep, forearm: new_forearm, deposit: new_deposit,
+        paid_in_full: new_paid_in_full, shipping: new_shipping}
+
+      updated_user_profile = assigns(:user_profile)
+      expect(updated_user_profile.id).to eq my_user_profile.id
+      expect(updated_user_profile.first_name).to eq new_first_name
+      expect(updated_user_profile.last_name).to eq new_last_name
+      expect(updated_user_profile.email).to eq new_email
+      expect(updated_user_profile.shipping_address).to eq new_shipping_address
+      expect(updated_user_profile.wedding_date).to eq new_wedding_date
+      expect(updated_user_profile.bridals_date).to eq new_bridals_date
+      expect(updated_user_profile.height).to eq new_height
+      expect(updated_user_profile.over_bust).to eq new_over_bust
+      expect(updated_user_profile.bust).to eq new_bust
+      expect(updated_user_profile.under_bust).to eq new_under_bust
+      expect(updated_user_profile.braw_size).to eq new_braw_size
+      expect(updated_user_profile.waist).to eq new_waist
+      expect(updated_user_profile.hip).to eq new_hip
+      expect(updated_user_profile.natural_waist).to eq new_natural_waist
+      expect(updated_user_profile.shoulder_to_shoulder).to eq new_shoulder_to_shoulder
+      expect(updated_user_profile.shoulder_to_waist).to eq new_shoulder_to_waist
+      expect(updated_user_profile.waist_to_floor).to eq new_waist_to_floor
+      expect(updated_user_profile.rise).to eq new_rise
+      expect(updated_user_profile.sleeve_length).to eq new_sleeve_length
+      expect(updated_user_profile.arm_hole).to eq new_arm_hole
+      expect(updated_user_profile.bicep).to eq new_bicep
+      expect(updated_user_profile.forearm).to eq new_forearm
+      expect(updated_user_profile.deposit).to eq new_deposit
+      expect(updated_user_profile.paid_in_full).to new_paid_in_full
+      expect(updated_user_profile.shipping).to eq new_shipping
+    end
+
+    it "redirects to the updated user_profile" do
+      new_first_name = Faker::Name.first_name
+      new_last_name = Faker::Name.last_name
+      new_email = Faker::Internet.email
+      new_phone_number = Faker::PhoneNumber.phone_number
+      new_shipping_address = Faker::Address.street_address
+      new_wedding_date = Faker::Date.forward(23)
+      new_bridals_date = Faker::Date.forward(20)
+      new_height = Faker::Number.decimal(2)
+      new_over_bust = Faker::Number.decimal(2)
+      new_bust = Faker::Number.decimal(2)
+      new_under_bust = Faker::Number.decimal(2)
+      new_braw_size = Faker::Number.decimal(2)
+      new_waist = Faker::Number.decimal(2)
+      new_hip = Faker::Number.decimal(2)
+      new_natural_waist = Faker::Number.decimal(2)
+      new_shoulder_to_shoulder = Faker::Number.decimal(2)
+      new_shoulder_to_waist = Faker::Number.decimal(2)
+      new_waist_to_floor = Faker::Number.decimal(2)
+      new_rise = Faker::Number.decimal(2)
+      new_sleeve_length = Faker::Number.decimal(2)
+      new_arm_hole = Faker::Number.decimal(2)
+      new_bicep = Faker::Number.decimal(2)
+      new_forearm = Faker::Number.decimal(2)
+      new_deposit = Faker::Boolean.boolean
+      new_paid_in_full = Faker::Boolean.boolean
+      new_shipping = Faker::Boolean.boolean
+
+      put :update, id: my_user_profile.id, user_profile: {first_name: new_first_name, last_name: new_last_name,
+        email: new_email, phone_number: new_phone_number, shipping_address: new_shipping_address,
+        wedding_date: new_wedding_date, bridals_date: new_bridals_date, height: new_height,
+        over_bust: new_over_bust, bust: new_bust, under_bust: new_under_bust,
+        braw_size: new_braw_size, waist: new_waist, hip: new_hip, natural_waist: new_natural_waist,
+        shoulder_to_shoulder: new_shoulder_to_shoulder, shoulder_to_waist: new_shoulder_to_waist,
+        waist_to_floor: new_waist_to_floor, rise: new_rise, sleeve_length: new_sleeve_length,
+        arm_hole: new_arm_hole, bicep: new_bicep, forearm: new_forearm, deposit: new_deposit,
+        paid_in_full: new_paid_in_full, shipping: new_shipping}
+        expect(response).to redirect_to my_user_profile
+    end
+  end
 end
