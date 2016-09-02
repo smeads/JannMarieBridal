@@ -1,5 +1,11 @@
 <h1>Client Profiles</h1>
 
 <% @user_profiles.each do |user_profile| %>
-   <p><%= link_to user_profile.first_name, user_profile_path(user_profile.id) %></p>
+  <div class="media">
+    <div class="media-body">
+      <h4 class="media-heading">
+        <%= link_to user_profile.first_name, user_profile %>
+      </h4>
+    </div>
+  </div>
 <% end %>
