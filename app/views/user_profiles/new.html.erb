@@ -1,2 +1,81 @@
-<h1>UserProfiles#new</h1>
-<p>Find me in app/views/user_profiles/new.html.erb</p>
+<%= form_for @user_profile do |f| %>
+   <%= f.label :first_name %>
+   <%= f.text_field :first_name %>
+
+   <%= f.label :last_name %>
+   <%= f.text_field :last_name %>
+
+   <%= f.label :email %>
+   <%= f.text_field :email %>
+
+   <%= f.label :phone_number %>
+   <%= f.text_field :phone_number %>
+
+   <%= f.label :shipping_address %>
+   <%= f.text_area :shipping_address %>
+
+   <%= f.label :wedding_date %>
+   <%= f.text_field :wedding_date %>
+
+   <%= f.label :bridals_date %>
+   <%= f.text_field :bridals_date %>
+
+   <%= f.label :height %>
+   <%= f.text_field :height %>
+
+   <%= f.label :over_bust %>
+   <%= f.text_field :over_bust %>
+
+   <%= f.label :bust %>
+   <%= f.text_field :bust %>
+
+   <%= f.label :under_bust %>
+   <%= f.text_field :under_bust %>
+
+   <%= f.label :braw_size %>
+   <%= f.text_field :braw_size %>
+
+   <%= f.label :waist %>
+   <%= f.text_field :waist %>
+
+   <%= f.label :hip %>
+   <%= f.text_field :hip %>
+
+   <%= f.label :natural_waist %>
+   <%= f.text_field :natural_waist %>
+
+   <%= f.label :shoulder_to_shoulder %>
+   <%= f.text_field :shoulder_to_shoulder %>
+
+   <%= f.label :shoulder_to_waist %>
+   <%= f.text_field :shoulder_to_waist %>
+
+   <%= f.label :waist_to_floor %>
+   <%= f.text_field :waist_to_floor %>
+
+   <%= f.label :rise %>
+   <%= f.text_field :rise %>
+
+   <%= f.label :sleeve_length %>
+   <%= f.text_field :sleeve_length %>
+
+   <%= f.label :arm_hole %>
+   <%= f.text_field :arm_hole %>
+
+   <%= f.label :bicep %>
+   <%= f.text_field :bicep %>
+
+   <%= f.label :forearm %>
+   <%= f.text_field :forearm %>
+
+   <%= f.label :deposit %>
+   <%= f.text_field :deposit %>
+
+   <%= f.label :paid_in_full %>
+   <%= f.text_field :paid_in_full %>
+
+   <%= f.label :paid_in_full %>
+   <%= f.text_field :paid_in_full %>
+
+   <%= f.submit "Save" %>
+<% end %>
