@@ -34,3 +34,5 @@ source 'https://rubygems.org'
  gem 'bootstrap-sass'
 
  gem 'faker'
+ #User authentication
+ gem 'devise'
