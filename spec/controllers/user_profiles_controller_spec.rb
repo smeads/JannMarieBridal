@@ -104,11 +104,48 @@ let(:my_user_profile) { UserProfile.create!(first_name: Faker::Name.first_name, 
         expect(response).to redirect_to UserProfile.last
     end
   end
-  #
-  # describe "GET #edit" do
-  #   it "returns http success" do
-  #     get :edit
-  #     expect(response).to have_http_status(:success)
-  #   end
-  # end
+
+  describe "GET edit" do
+    it "returns http success" do
+      get :edit, {id: my_user_profile.id}
+      expect(response).to have_http_status(:success)
+    end
+
+    it "renders the #edit view" do
+      get :edit, {id: my_user_profile.id}
+      expect(response).to render_template :edit
+    end
+
+    it "assigns user_profile to be updated to @user_profile" do
+      get :edit, {id: my_user_profile.id}
+
+      user_profile_instance = assigns(:user_profile)
+
+      expect(user_profile_instance.id).to eq my_user_profile.id
+      expect(user_profile_instance.first_name).to eq my_user_profile.first_name
+      expect(user_profile_instance.email).to eq my_user_profile.email
+      expect(user_profile_instance.shipping_address).to eq my_user_profile.shipping_address
+      expect(user_profile_instance.wedding_date).to eq my_user_profile.wedding_date
+      expect(user_profile_instance.bridals_date).to eq my_user_profile.bridals_date
+      expect(user_profile_instance.height).to eq my_user_profile.height
+      expect(user_profile_instance.over_bust).to eq my_user_profile.over_bust
+      expect(user_profile_instance.bust).to eq my_user_profile.bust
+      expect(user_profile_instance.under_bust).to eq my_user_profile.under_bust
+      expect(user_profile_instance.braw_size).to eq my_user_profile.braw_size
+      expect(user_profile_instance.waist).to eq my_user_profile.waist
+      expect(user_profile_instance.hip).to eq my_user_profile.hip
+      expect(user_profile_instance.natural_waist).to eq my_user_profile.natural_waist
+      expect(user_profile_instance.shoulder_to_shoulder).to eq my_user_profile.shoulder_to_shoulder
+      expect(user_profile_instance.shoulder_to_waist).to eq my_user_profile.shoulder_to_waist
+      expect(user_profile_instance.waist_to_floor).to eq my_user_profile.waist_to_floor
+      expect(user_profile_instance.rise).to eq my_user_profile.rise
+      expect(user_profile_instance.sleeve_length).to eq my_user_profile.sleeve_length
+      expect(user_profile_instance.arm_hole).to eq my_user_profile.arm_hole
+      expect(user_profile_instance.bicep).to eq my_user_profile.bicep
+      expect(user_profile_instance.forearm).to eq my_user_profile.forearm
+      expect(user_profile_instance.deposit).to eq my_user_profile.deposit
+      expect(user_profile_instance.paid_in_full).to eq my_user_profile.paid_in_full
+      expect(user_profile_instance.shipping).to eq my_user_profile.shipping
+    end
+  end
 end

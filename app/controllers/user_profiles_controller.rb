@@ -51,5 +51,6 @@ class UserProfilesController < ApplicationController
   end
 
   def edit
+    @user_profile = UserProfile.find(params[:id])
   end
 end
