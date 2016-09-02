@@ -1,2 +1,5 @@
-<h1>UserProfiles#index</h1>
-<p>Find me in app/views/user_profiles/index.html.erb</p>
+<h1>Client Profiles</h1>
+
+<% @user_profiles.each do |user_profile| %>
+   <p><%= link_to user_profile.first_name, user_profile_path(user_profile.id) %></p>
+<% end %>
