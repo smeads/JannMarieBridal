@@ -36,3 +36,5 @@ source 'https://rubygems.org'
  gem 'faker'
  #User authentication
  gem 'devise'
+ # Figaro provides an elegant solution for handling sensitive data with environment variables
+ gem 'figaro', '1.0'
