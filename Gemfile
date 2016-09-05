@@ -18,6 +18,9 @@ source 'https://rubygems.org'
    gem 'rspec-rails', '~> 3.0'
    gem 'factory_girl_rails'
    gem 'shoulda'
+   gem 'capybara'
+   gem 'guard-rspec'
+   gem 'spring-commands-rspec'
  end
 
  # Use SCSS for stylesheets
