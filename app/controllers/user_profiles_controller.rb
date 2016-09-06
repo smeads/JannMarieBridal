@@ -1,4 +1,5 @@
 class UserProfilesController < ApplicationController
+  before_action :authenticate_user!
 
   def index
     @user_profiles = UserProfile.all

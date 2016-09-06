@@ -7,6 +7,16 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
 10.times do
+  User.create!(
+    username: Faker::Name.name,
+    email: Faker::Internet.email,
+    password: "helloworld",
+    confirmed_at: "2016-08-4 18:00:00"
+  )
+end
+users = User.all
+
+10.times do
   UserProfile.create!(
     first_name: Faker::Name.first_name,
     last_name: Faker::Name.last_name,
@@ -39,4 +49,5 @@ end
 user_profiles = UserProfile.all
 
 puts "Seed finished"
+puts "#{User.count} users created"
 puts "#{UserProfile.count} user profiles created"

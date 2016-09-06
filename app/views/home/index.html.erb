@@ -1,2 +1,12 @@
-<h1>Welcome to Jann Marie Bridal</h1>
-<p>I look forward to working with you!</p>
+
+  <% if current_user %>
+  <h1>Jann Marie Bridal</h1>
+  <p>
+    <%= link_to "Sign Out", destroy_user_session_path, method: :delete, :class => 'btn btn-danger', data: {confirm: 'Are you sure you want to sign out?'} %>
+  <% else %>
+  <h1>Welcome to Jann Marie Bridal</h1>
+  <h3>Please <%= link_to "Sign In", new_user_session_path, class: 'btn btn-primary' %> or
+    <%= link_to "Sign Up", new_user_registration_path, class: 'btn btn-primary' %> to create a profile
+  </h3>
+  </p>
+  <% end %>
