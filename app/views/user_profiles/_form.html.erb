@@ -108,17 +108,19 @@
 <h2>Payment Status</h2>
    <%= form_group_tag(user_profile.errors[:deposit]) do %>
      <%= f.label :deposit %>
-     <%= f.text_field :deposit, class: 'form-control', placeholder: "3.5" %>
+     <form>
+        <input type = "checkbox">
    <% end %>
    <%= form_group_tag(user_profile.errors[:paid_in_full]) do %>
      <%= f.label :paid_in_full %>
-     <%= f.text_field :paid_in_full, class: 'form-control', placeholder: "3.5" %>
+        <input type = "checkbox">
    <% end %>
    <%= form_group_tag(user_profile.errors[:shipping]) do %>
      <%= f.label :shipping %>
-     <%= f.text_field :shipping, class: 'form-control', placeholder: "3.5" %>
+        <input type = "checkbox">
+     </form>
    <% end %>
   <div class="form-group">
-   <%= f.submit "Save", lass: 'btn btn-success' %>
+   <%= f.submit "Save", class: 'btn btn-success' %>
   </div>
 <% end %>
