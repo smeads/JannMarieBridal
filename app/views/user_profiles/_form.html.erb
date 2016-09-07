@@ -1,4 +1,4 @@
-<%= form_for @user_profile do |f| %>
+<%= form_for @user_profile, html: { multipart: true } do |f| %>
 <h2>Contact Info</h2>
   <% if user_profile.errors.any? %>
      <div class="alert alert-danger">
@@ -106,6 +106,11 @@
      <%= f.text_field :forearm, class: 'form-control', placeholder: "3.5" %>
    <% end %>
 <% if current_user && current_user.admin? %>
+  <h2>Dress Sketch</h2>
+  <%= form_group_tag(user_profile.errors[:image]) do %>
+    <%= f.label :image %>
+    <%= f.file_field :image %>
+  <% end %>
   <h2>Payment Status</h2>
    <%= form_group_tag(user_profile.errors[:deposit]) do %>
      <%= f.label :deposit %>

@@ -119,6 +119,8 @@
    <%= f.label :forearm %>:
    <%= @user_profile.forearm %>
   </div>
+<h2>Dress Sketch</h2>
+  <%= image_tag @user_profile.image.url(:large) %>
 <h2>Payment Status</h2>
   <div class="form-group">
    <%= f.label :deposit %>:
