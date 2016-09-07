@@ -7,6 +7,9 @@ class User < ActiveRecord::Base
 
   has_many :user_profiles
 
+  before_save { self.role ||= :member }
+  enum role: [:member, :admin]
+
   attr_accessor :login
 
   def self.find_first_by_auth_conditions(warden_conditions)

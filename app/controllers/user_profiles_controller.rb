@@ -1,5 +1,13 @@
 class UserProfilesController < ApplicationController
   before_action :authenticate_user!
+  before_action :authorize_user, except: [:show, :new, :create, :edit, :update, :destroy]
+
+  def authorize_user
+    unless current_user.admin?
+      flash[:alert] = "You must be an admin to do that."
+      redirect_to home_index_path
+    end
+  end
 
   def index
     @user_profiles = UserProfile.all
