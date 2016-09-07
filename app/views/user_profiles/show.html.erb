@@ -122,17 +122,17 @@
 <h2>Payment Status</h2>
   <div class="form-group">
    <%= f.label :deposit %>:
-   <%= @user_profile.deposit %>
+   <%= @user_profile.deposit ? "Your deposit has been paid." : "Your deposit hasn't been paid." %>
   </div>
 
   <div class="form-group">
    <%= f.label :paid_in_full %>:
-  <%= @user_profile.paid_in_full %>
+  <%= @user_profile.paid_in_full ? "You have paid in full, Thank You!." : "You haven't paid in full." %>
   </div>
 
   <div class="form-group">
    <%= f.label :shipping %>:
-   <%= @user_profile.shipping %>
+   <%= @user_profile.shipping ? "Your dress will be shipped to the provided shipping address." : "You are picking up your dress." %>
   </div>
   <div class="col-md-4">
     <%= link_to "Edit", edit_user_profile_path(@user_profile), class: 'btn btn-success' %>
