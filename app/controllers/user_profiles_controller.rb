@@ -24,8 +24,7 @@ class UserProfilesController < ApplicationController
 
   def create
     @user_profile = UserProfile.new
-    @user_profile.first_name = params[:user_profile][:first_name]
-    @user_profile.last_name = params[:user_profile][:last_name]
+    @user_profile.full_name = params[:user_profile][:full_name]
     @user_profile.email = params[:user_profile][:email]
     @user_profile.phone_number = params[:user_profile][:phone_number]
     @user_profile.shipping_address = params[:user_profile][:shipping_address]
@@ -35,7 +34,7 @@ class UserProfilesController < ApplicationController
     @user_profile.over_bust = params[:user_profile][:over_bust]
     @user_profile.bust = params[:user_profile][:bust]
     @user_profile.under_bust = params[:user_profile][:under_bust]
-    @user_profile.braw_size = params[:user_profile][:braw_size]
+    @user_profile.bra_size = params[:user_profile][:bra_size]
     @user_profile.waist = params[:user_profile][:waist]
     @user_profile.hip = params[:user_profile][:hip]
     @user_profile.natural_waist = params[:user_profile][:natural_waist]
@@ -69,8 +68,7 @@ class UserProfilesController < ApplicationController
 
   def update
     @user_profile = UserProfile.find(params[:id])
-    @user_profile.first_name = params[:user_profile][:first_name]
-    @user_profile.last_name = params[:user_profile][:last_name]
+    @user_profile.full_name = params[:user_profile][:full_name]
     @user_profile.email = params[:user_profile][:email]
     @user_profile.phone_number = params[:user_profile][:phone_number]
     @user_profile.shipping_address = params[:user_profile][:shipping_address]
@@ -80,7 +78,7 @@ class UserProfilesController < ApplicationController
     @user_profile.over_bust = params[:user_profile][:over_bust]
     @user_profile.bust = params[:user_profile][:bust]
     @user_profile.under_bust = params[:user_profile][:under_bust]
-    @user_profile.braw_size = params[:user_profile][:braw_size]
+    @user_profile.bra_size = params[:user_profile][:bra_size]
     @user_profile.waist = params[:user_profile][:waist]
     @user_profile.hip = params[:user_profile][:hip]
     @user_profile.natural_waist = params[:user_profile][:natural_waist]
@@ -109,7 +107,7 @@ class UserProfilesController < ApplicationController
   def destroy
     @user_profile = UserProfile.find(params[:id])
     if @user_profile.destroy
-      flash[:notice] = "\"#{@user_profile.first_name}\" was deleted successfully."
+      flash[:notice] = "\"#{@user_profile.full_name}\" was deleted successfully."
       redirect_to user_profiles_path
     else
      flash.now[:alert] = "There was an error deleting the wedding profile."

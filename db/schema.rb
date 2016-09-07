@@ -11,11 +11,10 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160907204258) do
+ActiveRecord::Schema.define(version: 20160907215349) do
 
   create_table "user_profiles", force: :cascade do |t|
-    t.string   "first_name"
-    t.string   "last_name"
+    t.string   "full_name"
     t.string   "email"
     t.string   "phone_number"
     t.text     "shipping_address"
@@ -25,7 +24,7 @@ ActiveRecord::Schema.define(version: 20160907204258) do
     t.string   "over_bust"
     t.string   "bust"
     t.string   "under_bust"
-    t.string   "braw_size"
+    t.string   "bra_size"
     t.string   "waist"
     t.string   "hip"
     t.string   "natural_waist"

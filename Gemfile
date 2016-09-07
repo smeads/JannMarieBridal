@@ -41,5 +41,5 @@ source 'https://rubygems.org'
  gem 'devise'
  # Figaro provides an elegant solution for handling sensitive data with environment variables
  gem 'figaro', '1.0'
-
+ # how to set up paperclip https://www.youtube.com/watch?v=Z5W-Y3aROVE
  gem "paperclip", "~> 5.0.0"

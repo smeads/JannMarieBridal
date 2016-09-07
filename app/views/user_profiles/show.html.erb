@@ -6,13 +6,8 @@
 <%= form_for @user_profile do |f| %>
 <h2>Contact Info</h2>
   <div class="form-group">
-    <%= f.label :first_name %>:
-   <%= @user_profile.first_name %>
-  </div>
-
-  <div class="form-group">
-   <%= f.label :last_name %>:
-   <%= @user_profile.last_name %>
+    <%= f.label :full_name %>:
+   <%= @user_profile.full_name %>
   </div>
 
   <div class="form-group">
@@ -61,8 +56,8 @@
   </div>
 
   <div class="form-group">
-    <%= f.label :braw_size %>:
-    <%= @user_profile.braw_size %>
+    <%= f.label :bra_size %>:
+    <%= @user_profile.bra_size %>
   </div>
 
   <div class="form-group">

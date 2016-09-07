@@ -10,13 +10,9 @@
        </ul>
      </div>
    <% end %>
-   <%= form_group_tag(user_profile.errors[:first_name]) do %>
-     <%= f.label :first_name %>
-     <%= f.text_field :first_name, class: 'form-control', placeholder: "First name" %>
-   <% end %>
-   <%= form_group_tag(user_profile.errors[:last_name]) do %>
-     <%= f.label :last_name %>
-     <%= f.text_field :last_name, class: 'form-control', placeholder: "Last name" %>
+   <%= form_group_tag(user_profile.errors[:full_name]) do %>
+     <%= f.label :full_name %>
+     <%= f.text_field :full_name, class: 'form-control', placeholder: "Full name" %>
    <% end %>
    <%= form_group_tag(user_profile.errors[:email]) do %>
      <%= f.label :email %>
@@ -56,9 +52,9 @@
      <%= f.label :under_bust %>
      <%= f.text_field :under_bust, class: 'form-control', placeholder: "3.5" %>
    <% end %>
-   <%= form_group_tag(user_profile.errors[:braw_size]) do %>
-     <%= f.label :braw_size %>
-     <%= f.text_field :braw_size, class: 'form-control', placeholder: "3.5" %>
+   <%= form_group_tag(user_profile.errors[:bra_size]) do %>
+     <%= f.label :bra_size %>
+     <%= f.text_field :bra_size, class: 'form-control', placeholder: "3.5" %>
    <% end %>
    <%= form_group_tag(user_profile.errors[:waist]) do %>
      <%= f.label :waist %>
