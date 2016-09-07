@@ -5,6 +5,8 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable,
          :confirmable, :authentication_keys => [:login]
 
+  has_many :user_profiles
+
   attr_accessor :login
 
   def self.find_first_by_auth_conditions(warden_conditions)

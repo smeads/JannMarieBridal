@@ -42,6 +42,8 @@ class UserProfilesController < ApplicationController
     @user_profile.paid_in_full = params[:user_profile][:paid_in_full]
     @user_profile.shipping = params[:user_profile][:shipping]
 
+    @user_profile.user = current_user
+
     if @user_profile.save
       flash[:notice] = "Wedding profile saved successfully."
       redirect_to @user_profile
