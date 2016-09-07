@@ -7,6 +7,7 @@ class UserProfilesController < ApplicationController
 
   def show
     @user_profile = UserProfile.find(params[:id])
+    # @user_profile.user = current_user
   end
 
   def new
