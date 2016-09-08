@@ -1,139 +1,169 @@
+<br>
 <div class="jumbotron">
 <h1>Custom Dress Profile</h1>
 </div>
 
 <div class="col-md-8">
-<%= form_for @user_profile do |f| %>
-<h2>Contact Info</h2>
-  <div class="form-group">
-    <%= f.label :full_name %>:
-   <%= @user_profile.full_name %>
-  </div>
-
-  <div class="form-group">
-   <%= f.label :email %>:
-   <%= @user_profile.email %>
-  </div>
-
-  <div class="form-group">
-   <%= f.label :phone_number %>:
-   <%= @user_profile.phone_number %>
-  </div>
-
-  <div class="form-group">
-   <%= f.label :shipping_address %>:
-   <%= @user_profile.shipping_address %>
-  </div>
-<h2>Important Dates</h2>
-  <div class="form-group">
-   <%= f.label :wedding_date %>:
-   <%= @user_profile.wedding_date %>
-  </div>
-
-  <div class="form-group">
-   <%= f.label :bridals_date %>:
-   <%= @user_profile.bridals_date %>
-  </div>
-<h2>Measurements</h2>
-  <div class="form-group">
-   <%= f.label :height %>:
-   <%= @user_profile.height %>
-  </div>
-
-  <div class="form-group">
-   <%= f.label :over_bust %>:
-   <%= @user_profile.over_bust %>
-  </div>
-
-  <div class="form-group">
-    <%= f.label :bust %>:
-    <%= @user_profile.bust %>
-  </div>
-
-  <div class="form-group">
-    <%= f.label :under_bust %>:
-    <%= @user_profile.under_bust %>
-  </div>
-
-  <div class="form-group">
-    <%= f.label :bra_size %>:
-    <%= @user_profile.bra_size %>
-  </div>
-
-  <div class="form-group">
-    <%= f.label :waist %>:
-    <%= @user_profile.waist %>
-  </div>
-
-  <div class="form-group">
-   <%= f.label :hip %>:
-   <%= @user_profile.hip %>
-  </div>
-
-  <div class="form-group">
-   <%= f.label :natural_waist %>:
-   <%= @user_profile.natural_waist %>
-  </div>
-
-  <div class="form-group">
-   <%= f.label :shoulder_to_shoulder %>:
-   <%= @user_profile.shoulder_to_shoulder %>
-  </div>
-
-  <div class="form-group">
-   <%= f.label :shoulder_to_waist %>:
-   <%= @user_profile.shoulder_to_waist %>
-  </div>
-
-  <div class="form-group">
-   <%= f.label :waist_to_floor %>:
-   <%= @user_profile.waist_to_floor %>
-  </div>
-
-  <div class="form-group">
-   <%= f.label :rise %>:
-   <%= @user_profile.rise %>
-  </div>
-<h2>Sleeves (if applicable)</h2>
-  <div class="form-group">
-   <%= f.label :sleeve_length %>:
-   <%= @user_profile.sleeve_length %>
-  </div>
-
-  <div class="form-group">
-   <%= f.label :arm_hole %>:
-   <%= @user_profile.arm_hole %>
-  </div>
-
-  <div class="form-group">
-   <%= f.label :bicep %>:
-   <%= @user_profile.bicep %>
-  </div>
-
-  <div class="form-group">
-   <%= f.label :forearm %>:
-   <%= @user_profile.forearm %>
-  </div>
-<h2>Dress Sketch</h2>
-  <%= image_tag @user_profile.image.url(:large) %>
-<h2>Payment Status</h2>
-  <div class="form-group">
-   <%= f.label :deposit %>:
-   <%= @user_profile.deposit ? "Your deposit has been paid." : "Your deposit hasn't been paid." %>
-  </div>
-
-  <div class="form-group">
-   <%= f.label :paid_in_full %>:
-  <%= @user_profile.paid_in_full ? "You have paid in full, Thank You!." : "You haven't paid in full." %>
-  </div>
-
-  <div class="form-group">
-   <%= f.label :shipping %>:
-   <%= @user_profile.shipping ? "Your dress will be shipped to the provided shipping address." : "You are picking up your dress." %>
-  </div>
+<table class="table table-striped table-hover">
+  <thead class="thead-inverse">
+    <tr>
+      <th><h2>Contact Info</h2></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong><%= "Full Name" %></strong></td>
+      <td><%= @user_profile.full_name %></td>
+    </tr>
+    <tr>
+      <td><strong><%= "Email" %></strong></td>
+      <td><%= @user_profile.email %></td>
+    </tr>
+    <tr>
+      <td><strong><%= "Phone Number" %></strong></td>
+      <td><%= @user_profile.phone_number%></td>
+    </tr>
+    <tr>
+      <td><strong><%= "Shipping Address" %></strong></td>
+      <td><%= @user_profile.shipping_address %></td>
+    </tr>
+  </tbody>
+</table>
+<table class="table table-striped table-hover">
+  <thead class="thead-inverse">
+    <tr>
+      <th><h2>Important Dates</h2></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong><%= "Wedding Date" %></strong></td>
+      <td><%= @user_profile.wedding_date %></td>
+    </tr>
+    <tr>
+      <td><strong><%= "Bridals Date" %></strong></td>
+      <td><%= @user_profile.bridals_date %></td>
+    </tr>
+  </tbody>
+</table>
+<table class="table table-striped table-hover">
+  <thead class="thead-inverse">
+    <tr>
+      <th><h2>Measurements</h2></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong><%= "Height" %></strong></td>
+      <td><%= @user_profile.height %></td>
+    </tr>
+    <tr>
+      <td><strong><%= "Over Bust" %></strong></td>
+      <td><%= @user_profile.over_bust %></td>
+    </tr>
+    <tr>
+      <td><strong><%= "Bust" %></strong></td>
+      <td><%= @user_profile.bust %></td>
+    </tr>
+    <tr>
+      <td><strong><%= "Under Bust" %></strong></td>
+      <td><%= @user_profile.under_bust %></td>
+    </tr>
+    <tr>
+      <td><strong><%= "Bra Size" %></strong></td>
+      <td><%= @user_profile.bra_size %></td>
+    </tr>
+    <tr>
+      <td><strong><%= "Waist" %></strong></td>
+      <td><%= @user_profile.waist %></td>
+    </tr>
+    <tr>
+      <td><strong><%= "Hip" %></strong></td>
+      <td><%= @user_profile.hip %></td>
+    </tr>
+    <tr>
+      <td><strong><%= "Natural Waist" %></strong></td>
+      <td><%= @user_profile.natural_waist %></td>
+    </tr>
+    <tr>
+      <td><strong><%= "Shoulder to Shoulder" %></strong></td>
+      <td><%= @user_profile.shoulder_to_shoulder %></td>
+    </tr>
+    <tr>
+      <td><strong><%= "Shoulder to Waist" %></strong></td>
+      <td><%= @user_profile.shoulder_to_waist %></td>
+    </tr>
+    <tr>
+      <td><strong><%= "Wasit to Floor" %></strong></td>
+      <td><%= @user_profile.waist_to_floor %></td>
+    </tr>
+    <tr>
+      <td><strong><%= "Rise" %></strong></td>
+      <td><%= @user_profile.rise %></td>
+    </tr>
+    <tr>
+    </tbody>
+  </table>
+<table class="table table-striped table-hover">
+  <thead class="thead-inverse">
+    <tr>
+      <th><h2>Sleeves (if applicable)</h2></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong><%= "Sleeve Length" %></strong></td>
+      <td><%= @user_profile.sleeve_length %></td>
+    </tr>
+    <tr>
+      <td><strong><%= "Arm Hole" %></strong></td>
+      <td><%= @user_profile.arm_hole %></td>
+    </tr>
+    <tr>
+      <td><strong><%= "Bicep" %></strong></td>
+      <td><%= @user_profile.bicep %></td>
+    </tr>
+    <tr>
+      <td><strong><%= "Forearm" %></strong></td>
+      <td><%= @user_profile.forearm %></td>
+    </tr>
+  </tbody>
+</table>
+<table class="table table-striped table-hover">
+  <thead class="thead-inverse">
+    <tr>
+      <th><h2>Dress Sketch</h2></th>
+    </tr>
+  </thead>
+  <tbody>
+   <tr>
+    <td><%= image_tag @user_profile.image.url(:large) %></td>
+   </tr>
+  </tbody>
+</table>
+<table class="table table-striped table-hover">
+  <thead class="thead-inverse">
+    <tr>
+      <th><h2>Payment Stauts</h2></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong><%= "Deposit" %></strong></td>
+      <td><%= @user_profile.deposit ? "Your deposit has been paid." : "Your deposit hasn't been paid." %></td>
+    </tr>
+    <tr>
+      <td><strong><%= "Pain in Full" %></strong></td>
+      <td><%= @user_profile.paid_in_full ? "You have paid in full, Thank You!." : "You haven't paid in full." %></td>
+    </tr>
+    <tr>
+      <td><strong><%= "Shipping" %></strong></td>
+      <td><%= @user_profile.shipping ? "Your dress will be shipped to the provided shipping address." : "You are picking up your dress." %></td>
+    </tr>
+  </tbody>
+</table>
   <div class="col-md-4">
     <%= link_to "Edit", edit_user_profile_path(@user_profile), class: 'btn btn-success' %>
     <%= link_to "Delete Profile", @user_profile, method: :delete, class: 'btn btn-danger', data: {confirm: 'Are you sure you want to delete your profile?'} %>
   </div>
-<% end %>
 </div>

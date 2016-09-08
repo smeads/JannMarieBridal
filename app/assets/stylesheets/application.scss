@@ -16,10 +16,27 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
-.user-info {
-   margin-top: 9px;
+ .jumbotron {
+   background-color:#ff9999 !important;
  }
 
- .nav {
-   margin-top: 5px;
+ .btn-primary {
+   background-color:transparent !important;
+   border-color:#ffffff !important;
+ }
+
+ .navbar-link {
+   color:#8c8c8c !important;
+ }
+
+h1,
+.h1,
+h2,
+.h2,
+h3,
+.h3,
+h4,
+.h4 {
+   font-family:"Times New Roman", Georgia, Serif !important;
+   color:#8c8c8c !important;
  }

@@ -1,11 +1,16 @@
-<h1>Client Profiles</h1>
-
+<br>
+<div class="jumbotron">
+  <h1>Client Profiles</h1>
+</div>
 <% @user_profiles.each do |user_profile| %>
   <div class="media">
     <div class="media-body">
-      <h4 class="media-heading">
+      <h3 class="media-heading">
+        <div class="text-center">
         <%= link_to user_profile.full_name, user_profile %>
-      </h4>
+        </div>
+      </h3>
     </div>
   </div>
 <% end %>
+</div>
