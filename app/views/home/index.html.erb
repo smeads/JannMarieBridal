@@ -1,17 +1,19 @@
 
 <div class="jumbotron">
+  <div class="text-center">
   <% if current_user %>
-  <h1>Jann Marie Bridal</h1>
-  <p>
+    <h1><%= image_tag("logos/JMBL.png", width: '400px') %></h1>
+    <p><br>
     <%= link_to "Create Profile", new_user_profile_path, class: 'btn btn-primary' %>
   <% else %>
-  <h1>Welcome to Jann Marie Bridal</h1>
-  <h3>Please <%= link_to "Sign In", new_user_session_path, class: 'btn btn-primary' %> or
+    <h1><%= image_tag("logos/JMBL.png", width: '400px') %></h1>
+    <h3>Please <%= link_to "Sign In", new_user_session_path, class: 'btn btn-primary' %> or
     <%= link_to "Sign Up", new_user_registration_path, class: 'btn btn-primary' %> to create a profile
-  </h3>
-  </p>
+    </h3>
+    </p>
   <% end %>
-  </div>
+</div>
+</div>
   <div class="row">
    <div class="col-md-4">
      <h2>Your custom dress</h2>
