@@ -15,7 +15,6 @@ class UserProfilesController < ApplicationController
 
   def show
     @user_profile = UserProfile.find(params[:id])
-    # @user_profile.user = current_user
   end
 
   def new
@@ -24,32 +23,7 @@ class UserProfilesController < ApplicationController
 
   def create
     @user_profile = UserProfile.new
-    @user_profile.full_name = params[:user_profile][:full_name]
-    @user_profile.email = params[:user_profile][:email]
-    @user_profile.phone_number = params[:user_profile][:phone_number]
-    @user_profile.shipping_address = params[:user_profile][:shipping_address]
-    @user_profile.wedding_date = params[:user_profile][:wedding_date]
-    @user_profile.bridals_date = params[:user_profile][:bridals_date]
-    @user_profile.height = params[:user_profile][:height]
-    @user_profile.over_bust = params[:user_profile][:over_bust]
-    @user_profile.bust = params[:user_profile][:bust]
-    @user_profile.under_bust = params[:user_profile][:under_bust]
-    @user_profile.bra_size = params[:user_profile][:bra_size]
-    @user_profile.waist = params[:user_profile][:waist]
-    @user_profile.hip = params[:user_profile][:hip]
-    @user_profile.natural_waist = params[:user_profile][:natural_waist]
-    @user_profile.shoulder_to_shoulder = params[:user_profile][:shoulder_to_shoulder]
-    @user_profile.shoulder_to_waist = params[:user_profile][:shoulder_to_waist]
-    @user_profile.waist_to_floor = params[:user_profile][:waist_to_floor]
-    @user_profile.rise = params[:user_profile][:rise]
-    @user_profile.sleeve_length = params[:user_profile][:sleeve_length]
-    @user_profile.arm_hole = params[:user_profile][:arm_hole]
-    @user_profile.bicep = params[:user_profile][:bicep]
-    @user_profile.forearm = params[:user_profile][:forearm]
-    @user_profile.image = params[:user_profile][:image]
-    @user_profile.deposit = params[:user_profile][:deposit]
-    @user_profile.paid_in_full = params[:user_profile][:paid_in_full]
-    @user_profile.shipping = params[:user_profile][:shipping]
+    @user_profile = UserProfile.new(user_profile_params)
 
     @user_profile.user = current_user
 
@@ -68,32 +42,7 @@ class UserProfilesController < ApplicationController
 
   def update
     @user_profile = UserProfile.find(params[:id])
-    @user_profile.full_name = params[:user_profile][:full_name]
-    @user_profile.email = params[:user_profile][:email]
-    @user_profile.phone_number = params[:user_profile][:phone_number]
-    @user_profile.shipping_address = params[:user_profile][:shipping_address]
-    @user_profile.wedding_date = params[:user_profile][:wedding_date]
-    @user_profile.bridals_date = params[:user_profile][:bridals_date]
-    @user_profile.height = params[:user_profile][:height]
-    @user_profile.over_bust = params[:user_profile][:over_bust]
-    @user_profile.bust = params[:user_profile][:bust]
-    @user_profile.under_bust = params[:user_profile][:under_bust]
-    @user_profile.bra_size = params[:user_profile][:bra_size]
-    @user_profile.waist = params[:user_profile][:waist]
-    @user_profile.hip = params[:user_profile][:hip]
-    @user_profile.natural_waist = params[:user_profile][:natural_waist]
-    @user_profile.shoulder_to_shoulder = params[:user_profile][:shoulder_to_shoulder]
-    @user_profile.shoulder_to_waist = params[:user_profile][:shoulder_to_waist]
-    @user_profile.waist_to_floor = params[:user_profile][:waist_to_floor]
-    @user_profile.rise = params[:user_profile][:rise]
-    @user_profile.sleeve_length = params[:user_profile][:sleeve_length]
-    @user_profile.arm_hole = params[:user_profile][:arm_hole]
-    @user_profile.bicep = params[:user_profile][:bicep]
-    @user_profile.forearm = params[:user_profile][:forearm]
-    @user_profile.image = params[:user_profile][:image]
-    @user_profile.deposit = params[:user_profile][:deposit]
-    @user_profile.paid_in_full = params[:user_profile][:paid_in_full]
-    @user_profile.shipping = params[:user_profile][:shipping]
+    @user_profile.assign_attributes(user_profile_params)
 
     if @user_profile.save
       flash[:notice] = "Wedding profile saved successfully."
@@ -113,5 +62,15 @@ class UserProfilesController < ApplicationController
      flash.now[:alert] = "There was an error deleting the wedding profile."
      render :show
     end
+  end
+
+  private
+
+  def user_profile_params
+    params.require(:user_profile).permit(:full_name, :email, :phone_number, :shipping_address,
+    :wedding_date, :bridals_date, :height, :over_bust, :bust, :under_bust, :bra_size,
+    :waist, :hip, :natural_waist, :shoulder_to_shoulder, :shoulder_to_waist, :waist_to_floor,
+    :rise, :sleeve_length, :arm_hole, :bicep, :forearm, :image, :deposit,
+    :paid_in_full, :shipping)
   end
 end
