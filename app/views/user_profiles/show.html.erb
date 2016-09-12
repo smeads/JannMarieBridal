@@ -1,9 +1,15 @@
 <br>
 <div class="jumbotron">
-<h1>Custom Dress Profile</h1>
+  <div class="col-sm-8">
+    <h1>Your Custom Dress Profile</h1>
+    <p>This is what you have been waiting for!</p>
+  </div>
+  <div class="text-center">
+    <h2><%= image_tag("logos/JMBL.png", width: '200px') %></h2>
+  </div>
 </div>
 
-<div class="col-md-8">
+<div class="col-md-4">
 <table class="table table-striped table-hover">
   <thead class="thead-inverse">
     <tr>
@@ -38,7 +44,7 @@
   <tbody>
     <tr>
       <td><strong><%= "Wedding Date" %></strong></td>
-      <td><%= @user_profile.wedding_date %></td>
+      <td style="text-center"><%= @user_profile.wedding_date %></td>
     </tr>
     <tr>
       <td><strong><%= "Bridals Date" %></strong></td>
@@ -54,7 +60,7 @@
   </thead>
   <tbody>
     <tr>
-      <td><strong><%= "Height" %></strong></td>
+      <td><strong><%= "Height" %></strong>
       <td><%= @user_profile.height %></td>
     </tr>
     <tr>
@@ -137,7 +143,7 @@
   </thead>
   <tbody>
    <tr>
-    <td><%= image_tag @user_profile.image.url(:large) %></td>
+    <td style="text-align: center"><%= image_tag @user_profile.image.url(:large) %></td>
    </tr>
   </tbody>
 </table>

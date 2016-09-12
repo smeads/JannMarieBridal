@@ -25,6 +25,21 @@
    border-color:#ffffff !important;
  }
 
+ .btn-primary:hover, .btn-primary:focus {
+   color: #fff !important;
+   background-color: #e6e6e6 !important;
+ }
+
+ .btn-success {
+   background-color:#8c8c8c !important;
+   border-color:#ffffff !important;
+ }
+
+ .btn-success:hover, .btn-success:focus {
+   color: #fff !important;
+   background-color: #ff9999  !important;
+ }
+
  .navbar-link {
    color:#8c8c8c !important;
  }
@@ -36,7 +51,11 @@ h2,
 h3,
 .h3,
 h4,
-.h4 {
+.h4{
    font-family:"Times New Roman", Georgia, Serif !important;
    color:#8c8c8c !important;
+ }
+
+ p {
+   font-family: "Times New Roman", Georgia, Serif !important;
  }

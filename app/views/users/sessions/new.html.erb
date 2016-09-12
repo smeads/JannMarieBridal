@@ -1,6 +1,15 @@
-<h2>Log in</h2>
-
+<br>
+<div class="jumbotron">
+  <div class="col-sm-8">
+    <h1>Log in</h1>
+    <p>Welcome Back!</p>
+  </div>
+  <div class="text-center">
+    <h2><%= image_tag("logos/JMBL.png", width: '200px') %></h2>
+  </div>
+</div>
 <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+<div class="text-center">
   <div class="field">
     <p><%= f.label :login %><br />
     <%= f.text_field :login, autofocus: true %></p>
@@ -24,3 +33,15 @@
 <% end %>
 
 <%= render "users/shared/links" %>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+</div>
