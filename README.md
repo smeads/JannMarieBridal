@@ -15,11 +15,11 @@ A simple web application for my wife! She is a talented seamstress that speciali
 #### Authentication & Authorization with Devise:
 This web application incorporates [Devise](https://github.com/plataformatec/devise) for user authentication & authorization. The authentication system allows users to sign up and sends emails for account confirmation. Users can sign in and out of Jann Marie Bridal. There are also standard and admin users. Admin has more capabilities for managing the entire dress creating process.
 
-#### Paperclip & ImageMagick
+#### Paperclip & ImageMagick:
 The implementation of [Paperclip](https://github.com/thoughtbot/paperclip) along with [ImageMagick](http://www.imagemagick.org/script/index.php) the application has a feature for uploading an image.
 
-#### Video Walk Through
+#### Video Walk Through:
 https://www.youtube.com/embed/81ksEbT_faU
 
-#### Heroku Link
+#### Heroku Link:
 [Jann Marie Bridal](https://young-mesa-83094.herokuapp.com/)
