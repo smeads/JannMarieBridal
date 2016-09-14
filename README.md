@@ -1,6 +1,6 @@
 #README
 
-#### Jann Marie Bridal
+## Jann Marie Bridal
 A simple web application for my wife! She is a talented seamstress that specializes in making custom wedding dresses. The application is an on-boarding solution for her and her clients. It is a simple and easy way for her clients to provide their specific measurements and other important information for a custom wedding dress experience. It is also a great way for my wife to manage her clients and interact with them in a unique way. While this application is simple upfront it has great potential to evolve into something greater.
 
 ### Application Features
